@@ -1,0 +1,10 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.cards {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  list-style-type: none;
+}
