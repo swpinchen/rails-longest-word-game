@@ -10,4 +10,8 @@
   <p>Sorry but <strong><%= @word %></strong> can't be built out of <%= @letters.join(", ") %></p>
 <% end %>
 
+<div>
+<h2>Score: <%= @score %> </h2>
+</div>
+
 <%= link_to "Play again", new_path %>
