@@ -24,9 +24,15 @@ class GamesController < ApplicationController
   end
 
   def english_word?(word)
-    response = URI.open("https://wagon-dictionary.herokuapp.com/#{word}")
-    json = JSON.parse(response.read)
-    json['found']
+    if word.length > 1
+      response = URI.open("https://wagon-dictionary.herokuapp.com/#{word}")
+      json = JSON.parse(response.read)
+      json['found']
+    elsif word.include?('I') || word.include?('A')
+      true
+    else
+      false
+    end
   end
 
   def calculate_score(included, english_word, word)
